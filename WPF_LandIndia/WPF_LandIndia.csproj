@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FlagIndia.png" />
+    <None Remove="IndiaImages\1.jpg" />
+    <None Remove="IndiaImages\10.jpg" />
+    <None Remove="IndiaImages\11.jpg" />
+    <None Remove="IndiaImages\12.jpg" />
+    <None Remove="IndiaImages\13.jpg" />
+    <None Remove="IndiaImages\2.jpg" />
+    <None Remove="IndiaImages\3.jpg" />
+    <None Remove="IndiaImages\4.jpg" />
+    <None Remove="IndiaImages\5.jpg" />
+    <None Remove="IndiaImages\6.jpg" />
+    <None Remove="IndiaImages\7.jpg" />
+    <None Remove="IndiaImages\8.jpg" />
+    <None Remove="IndiaImages\9.jpg" />
+    <None Remove="mapindia.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="FlagIndia.png" />
+    <Resource Include="IndiaImages\1.jpg" />
+    <Resource Include="IndiaImages\10.jpg" />
+    <Resource Include="IndiaImages\11.jpg" />
+    <Resource Include="IndiaImages\12.jpg" />
+    <Resource Include="IndiaImages\13.jpg" />
+    <Resource Include="IndiaImages\2.jpg" />
+    <Resource Include="IndiaImages\3.jpg" />
+    <Resource Include="IndiaImages\4.jpg" />
+    <Resource Include="IndiaImages\5.jpg" />
+    <Resource Include="IndiaImages\6.jpg" />
+    <Resource Include="IndiaImages\7.jpg" />
+    <Resource Include="IndiaImages\8.jpg" />
+    <Resource Include="IndiaImages\9.jpg" />
+    <Resource Include="mapindia.gif" />
+  </ItemGroup>
+
+</Project>

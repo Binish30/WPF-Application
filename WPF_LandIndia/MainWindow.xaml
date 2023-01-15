@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPF_LandIndia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_LandIndia"
+            Title="Land Of India" Height="450" Width="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Heading-->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Orientation="Horizontal" Background="#FF7D9BA7" OpacityMask="Black">
+            <TextBlock Padding="12,10,0,0" FontSize="20" FontWeight="DemiBold" Foreground="White" Margin="0" Height="40" Width="300"/>
+            <Image Source="/FlagIndia.png" Width="60" Margin="400,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="#FFE5E3C9">
+            <TextBlock Text="A glimpse of a magical land called India" TextAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold" Foreground="#FF000002" Margin="10,20,0,0"></TextBlock>
+            <Border Margin="10,40,0,0" Width="300" Height="90" BorderThickness="1" Background="#FFB4CFB0">
+                <TextBlock TextWrapping="Wrap" Text="Incredible                  India" TextAlignment="Center" Margin="10,10,0,0" FontSize="25" FontWeight="ExtraBlack" Width="280" Height="60">
+                </TextBlock>
+            </Border>
+            <Button Name="Btn_aboutIndia" Margin="10,70,0,0" Width="280" Height="20" Content="About India" FontSize="10" FontWeight="Bold" Background="#FF4C5D63" Foreground="White" Click="Btn_aboutIndia_Click" ToolTip="Click this to see about Inida"></Button>
+            <TextBlock Text="Click button to get infromation about Inida" Margin="120,0,0,0" FontSize="10" Foreground="BlueViolet"/>
+            <Button Name="Btn_photo" Margin="10,10,0,0" Width="280" Height="20" Content="Photo Gallery" FontSize="10" FontWeight="Bold" Background="#FF4C5D63" Foreground="White" Click="Btn_photo_Click" ToolTip="Click this to see Photo"></Button>
+            <TextBlock Text="Click button to see photo of famous places" Margin="120,0,0,0" FontSize="10" Foreground="BlueViolet"/>
+        </StackPanel>
+
+        <!--Map Of India-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+            <Image Source="/mapindia.gif" Stretch="Fill" Height="380"></Image>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

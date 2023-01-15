@@ -1,0 +1,58 @@
+﻿<Window x:Class="WPF_LandIndia.aboutIndia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_LandIndia"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+       Closed="Window_Closed"
+        Title="aboutIndia" Height="450" Width="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Heading-->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Background="#FF7D9BA7">
+            <TextBlock Padding="12,10,0,0" FontSize="20" FontWeight="DemiBold" Foreground="White" Margin="0" Height="40" Width="300"/>
+            <Image Source="/FlagIndia.png" Width="60" Margin="400,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Width="200" HorizontalAlignment="Left" Margin="15,3,0,0" Height="380" Orientation="Vertical" VerticalAlignment="Top">
+            <!--<TextBlock Text="Filter" Width="200" Margin="0,5,40,0" HorizontalAlignment="Left" Foreground="Black"></TextBlock>
+            <TextBox Name="Tbx_filter" Margin="0,2,0,0" Width="200" HorizontalAlignment="Left" TextChanged="Tbx_Filter_TextChanged"></TextBox>-->
+            <TextBlock  Width="150" Margin="0,2,0,0" HorizontalAlignment="Left" Foreground="Black"></TextBlock>
+            <ListBox Name="Lbx_Categories" Margin="0,0,0,2" Width="200" Height="300" HorizontalAlignment="Left" Background="#FFE5E3C9">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="0,15,5,5">
+                            <TextBlock TextWrapping="Wrap">
+                                <Run Text="{Binding categories}" FontSize="18" FontWeight="Bold"></Run>
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!--<Button Name="Btn_AddCategories" Width="280" Height="20" Content="Add categories" FontSize="10" FontWeight="Bold" Background="SkyBlue" Click="Btn_AddCategories_Click"></Button>-->
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.Column="1">
+            <StackPanel Width="400" HorizontalAlignment="Left" DataContext="{Binding ElementName=Lbx_Categories,Path=SelectedItem}" Margin="0,3,0,0" Background="#FFF7F5DD">
+                <StackPanel Margin="0,5,0,0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBlock TextWrapping="Wrap">
+                        <Run Text="{Binding categories}" FontSize="20" FontWeight="Bold" Foreground="Black"></Run>
+                    </TextBlock>
+                    <TextBlock Name="Tbx_history" TextWrapping="Wrap" Margin="0,10,0,0" Padding="0,0,15,0" TextAlignment="Justify">
+                        <Run Text="{Binding history}" FontSize="13"></Run>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
